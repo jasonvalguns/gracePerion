@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Mary Grace Perion | Portfolio</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- HERO SECTION -->
+<section class="hero">
+    <div class="profile">
+        <img src="profile-g.png" alt="Profile Image">
+
+        <h1 class="typing-text"> 
+            I'm&nbsp;<span class="typed" data-typed-items="Mary Grace Perion, Accounting Staff"></span>
+        </h1>
+
+        <p>Welcome to my professional portfolio</p>
+
+			<div class="hero-buttons">
+				<a href="#resume" class="btn">View Resume</a>
+				<a href="MARY GRACE PERION RESUME.docx" class="download-btn" download>
+				<i class="fa-solid fa-download"></i> Download Resume
+				</a>
+				
+		</div>
+    </div>
+</section>
+
+<!-- RESUME SECTION -->
+<section id="resume" class="resume-section">
+    <div class="resume-container">
+	
+       <h2>Resume</h2>
+        
+ 
+        <!-- Professional Experience -->
+        <div class="resume-block">
+            <h3>Professional Experience</h3>
+		
+            <br><h4>Accounting Staff</h4>
+            <p><strong> Triangelen Marketing Corporation</strong></p>
+            <p>Paliparan Technopark, Dasmariñas</p>
+            <p>Sep 2021 – Jul 2024</p>
+			</br>
+            <ul>
+                <li>Managed financial transactions, bookkeeping, and distribution records for Kopiko products.</li>
+				<li>Assisted in preparation of reports for banking and financial services.</li>
+				<li>Maintained accurate and organized accounting documentation.</li>
+            </ul>
+        </div>
+
+
+        <!-- Technical Skills -->
+        <div class="resume-block">
+            <h3>Accounting Proficiencies</h3>
+            <ul>
+                <li>Bookkeeping</li>
+				<li>Accounts Payable / Accounts Receivable</li>
+				<li>Financial Reporting</li>
+				<li>Bank Reconciliation</li>
+				<li>Payroll Processing</li>
+				<li>Tax Preparation</li>
+                <li>Microsoft Excel, Word, PowerPoint</li>
+		    </ul>
+        </div>
+
+        <!-- Soft Skills -->
+        <div class="resume-block">
+            <h3>Professional Skills</h3>
+            <ul>
+                <li>Attention to Detail</li>
+                <li>Time Management</li>
+                <li>Analytical Thinking</li>
+                <li>Communication Skills</li>
+                <li>Confidentiality Handling</li>
+                <li>Problem Solving & Adaptability</li>
+                
+            </ul>
+        </div>
+
+        <!-- Training & Seminars -->
+      <div class="resume-block">
+    <h3>Training & Seminars</h3>
+
+    <ul class="training-list">
+
+        <li>
+            Completed Internship at Provincial Government of Environmental Resources (2017)
+            <img src="How to Start Coding.jpg" class="cert-img">
+        </li>
+
+        <li>
+            General Information Seminar (2019)
+            <img src="ICT trends and Essential in the New Normal Certificate.jpg" class="cert-img">
+        </li>
+
+        <li>
+            Interacting with Professionals: Enhancing Leadership & Interpersonal Skills (2019)
+            <img src="Hot Skills to Learn for Higher Value Jobs Certificate.jpg" class="cert-img">
+        </li>
+
+        <li>
+            The Secret to Saving and Building Your Future (2019)
+            <img src="Developing Outstanding Leadership Skills.jpg" class="cert-img">
+        </li>
+
+        
+    </ul>
+</div>
+</section>
+
+<!-- Typed.js -->
+<script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+    const typedElement = document.querySelector(".typed");
+    const items = typedElement.getAttribute("data-typed-items");
+    const typedStrings = items.split(",");
+
+    new Typed(".typed", {
+        strings: typedStrings,
+        typeSpeed: 100,
+        backSpeed: 50,
+        backDelay: 2000,
+        loop: true
+    });
+});
+</script>
+
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+
+    const items = document.querySelectorAll(".training-list li");
+
+    items.forEach(item => {
+        item.addEventListener("click", function() {
+
+            const image = this.querySelector(".cert-img");
+            image.classList.toggle("show");
+
+        });
+    });
+
+});
+</script>
+
+</body>
+</html>

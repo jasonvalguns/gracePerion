@@ -1,0 +1,252 @@
+/* =========================
+   RESET
+========================= */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    overflow-x: hidden;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* =========================
+   HERO SECTION
+========================= */
+.hero {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background: url("test.png") no-repeat center center/cover;
+    padding: 20px;
+    position: relative;
+}
+
+.hero::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0,0,0,0.65);
+    z-index: 1;
+}
+
+.profile {
+    position: relative;
+    z-index: 2;
+    width: 100%;
+    max-width: 500px;
+}
+
+/* PROFILE IMAGE */
+.profile img {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 15px;
+    border: 3px solid white;
+}
+
+/* TYPING TEXT */
+.typing-text {
+    min-height: 45px;
+    font-size: 20px;
+    color: white;
+    margin-bottom: 10px;
+}
+
+.typed {
+    color: #00bfff;
+}
+
+/* SUBTITLE */
+.profile p {
+    color: #ddd;
+    margin-bottom: 20px;
+    font-size: 14px;
+}
+
+/* =========================
+   HERO BUTTONS
+========================= */
+.hero-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.hero-buttons a,
+.hero-buttons button {
+    width: 100%;
+    padding: 10px;
+    border-radius: 25px;
+    border: none;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+    color: white;
+    text-align: center;
+    transition: 0.3s ease;
+}
+
+/* Button Colors */
+.btn { background: #2a5298; }
+.download-btn { background: #007bff; }
+.print-btn { background: #28a745; }
+
+/* Hover Effects */
+.hero-buttons a:hover,
+.hero-buttons button:hover {
+    opacity: 0.85;
+}
+
+/* =========================
+   RESUME SECTION
+========================= */
+.resume-section {
+    padding: 30px 15px;
+    background: #f4f6f9;
+}
+
+.resume-container {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.resume-container h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 22px;
+    color: #2a5298;
+}
+
+.resume-block {
+    margin-bottom: 20px;
+}
+
+.resume-block h3 {
+    font-size: 18px;
+    margin-bottom: 8px;
+    color: #2a5298;
+}
+
+.resume-block h4 {
+    font-size: 15px;
+}
+
+.resume-block p,
+.resume-block li {
+    font-size: 14px;
+}
+
+.resume-block ul {
+    padding-left: 18px;
+}
+
+/* =========================
+   TRAININGS & CERTIFICATES
+========================= */
+.training-list li {
+    cursor: pointer;
+    margin-bottom: 15px;
+    font-weight: 500;
+    overflow: visible; /* IMPORTANT */
+}
+
+.training-list li:hover {
+    color: #007bff;
+}
+
+.cert-img {
+    max-height: 0;
+    overflow: hidden;
+    width: 100%;
+    max-width: 600px;
+    margin-top: 10px;
+    border-radius: 10px;
+    border: 2px solid #ddd;
+    transition: max-height 0.4s ease;
+}
+
+.cert-img.show {
+    max-height: 1000px;
+}
+.training-list li {
+    overflow: visible;
+}
+
+/* =========================
+   DESKTOP RESPONSIVE
+========================= */
+@media (min-width: 768px) {
+
+    .profile {
+        max-width: 800px;
+    }
+
+    .profile img {
+        width: 170px;
+        height: 170px;
+    }
+
+    .typing-text {
+        font-size: 28px;
+        min-height: 60px;
+    }
+
+    .profile p {
+        font-size: 16px;
+    }
+
+    .hero-buttons {
+        flex-direction: row;
+        justify-content: center;
+    }
+
+    .hero-buttons a,
+    .hero-buttons button {
+        width: auto;
+        padding: 12px 25px;
+        font-size: 15px;
+    }
+
+    .resume-container {
+        max-width: 900px;
+        margin: auto;
+        padding: 40px;
+        box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+    }
+
+    .resume-container h2 {
+        font-size: 28px;
+    }
+
+    .resume-block h3 {
+        font-size: 20px;
+    }
+}
+
+/* =========================
+   MOBILE FIX
+========================= */
+@media (max-width: 768px) {
+    .cert-img {
+        border-radius: 8px;
+        margin: 8px 0 15px 0;
+    }
+}
